@@ -11,7 +11,6 @@ document.querySelector('form').addEventListener('submit', function(event) {
 function copiarFormulario() {
     let dados = [];
 
-    // Agrupar e formatar a origem de contato primeiro
     let origens = document.querySelectorAll('input[name="origem"]');
     origens.forEach(origem => {
         if (origem.checked) {
@@ -19,24 +18,27 @@ function copiarFormulario() {
         }
     });
 
-    // Coletar campos de input e textarea, exceto conclusão
     let inputs = document.querySelectorAll('input[type="text"], textarea:not([name="conclusao"]), select');
     
     inputs.forEach(input => {
-        if (input.value) {  // Inclui apenas os campos que foram preenchidos.
+        if (input.value) {  
             let label = input.name === "sinal_medido" ? "Sinal Medido" : input.name.charAt(0).toUpperCase() + input.name.slice(1).replace(/_/g, " ");
             dados.push(label + ": " + input.value);
         }
     });
 
-    // Incluir configurações realizadas, separadas por vírgula
+    // Incluir o estado de LOSS se estiver marcado
+    let lossCheckbox = document.querySelector('input[name="loss"]');
+    if (lossCheckbox && lossCheckbox.checked) {
+        dados.push("LOSS: Sim");
+    }
+
     let configuracoes = Array.from(document.querySelectorAll('input[name="configuracoes"]:checked'));
     if (configuracoes.length > 0) {
         let configText = configuracoes.map(config => config.parentElement.textContent.trim()).join(", ");
         dados.push("Configurações Realizadas: " + configText);
     }
 
-    // Adicionar a conclusão por último
     let conclusao = document.querySelector('textarea[name="conclusao"]');
     if (conclusao.value) {
         dados.push("Conclusão: " + conclusao.value);
@@ -47,6 +49,7 @@ function copiarFormulario() {
         .then(() => alert('Informações copiadas com sucesso!'))
         .catch(err => alert('Erro ao copiar as informações: ' + err));
 }
+
 
 
 
