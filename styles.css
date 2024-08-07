@@ -1,0 +1,85 @@
+body {
+    background-image: url('marcella-marcella-BXR9wvl29J8-unsplash.jpg');
+    background-size: cover; /* Isso garante que a imagem cubra toda a tela, mas pode cortar partes da imagem */
+    background-position: center; /* Centraliza a imagem na página */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px; /* Adicionado padding para garantir espaço ao redor do conteúdo */
+    min-height: 100vh; /* Usando min-height ao invés de height */
+    display: flex;
+    flex-direction: column; /* Mudando a direção para coluna */
+    justify-content: center;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: auto; /* Garante que o formulário esteja centralizado */
+    overflow-y: auto; /* Permite rolagem vertical dentro do formulário se necessário */
+}
+
+
+.fieldset {
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #f9f9f9; /* Fundo claro para os fieldsets */
+    border: 1px solid #ddd; /* Borda sutil para os fieldsets */
+}
+
+legend {
+    color: #333; /* Cor mais escura para o texto do legend */
+    font-size: 18px; /* Tamanho maior para o texto do legend */
+    padding-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px; /* Mais espaço entre os labels */
+    font-size: 16px; /* Tamanho de fonte maior para melhor leitura */
+}
+
+input[type="text"], textarea, select {
+    width: 100%; /* Faz os campos ocuparem todo o espaço horizontal disponível */
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc; /* Borda sutil */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button {
+    width: 100%; /* O botão ocupa toda a largura do formulário */
+    padding: 10px;
+    background-color: #007BFF; /* Cor de fundo azul */
+    color: white;
+    font-size: 16px; /* Tamanho de fonte maior */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    height: 1px;
+    background-color: #ccc; /* Linha sutil para separar as seções */
+}

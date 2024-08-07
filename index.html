@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Suporte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form>
+        <!-- Campos de checkbox para origem de contato -->
+        <div class="fieldset">
+            <legend>Origem de Contato</legend>
+            <label><input type="checkbox" name="origem" value="omini" required oninput="setCustomValidity('')"> Omini</label>
+            <label><input type="checkbox" name="origem" value="telefone" required oninput="setCustomValidity('')"> Telefone</label>
+        </div>        
+        <hr>
+        <!-- Campos de texto para informações do cliente -->
+        <div class="fieldset">
+            <label>Nome: <input type="text" name="nome" required></label>
+            <label>Número: <input type="text" name="numero" required></label>
+            <label>Protocolo: <input type="text" name="protocolo" required></label>         
+            <label>Resumo:
+                <textarea name="resumo"></textarea>
+            </label>
+        </div>
+        <hr>
+        <!-- Checkbox para configurações realizadas -->
+        <div class="fieldset">
+            <legend>Configurações Realizadas</legend>
+            <label><input type="checkbox" name="configuracoes" value="derrubada_conexao"> Derrubada de Conexão</label>
+            <label><input type="checkbox" name="configuracoes" value="desativado_reativado_ipv6"> Desativado e Reativado IPV6</label>
+            <label><input type="checkbox" name="configuracoes" value="firmware_novamente_atualizado"> Firmware Novamente Atualizado</label>
+            <label><input type="checkbox" name="configuracoes" value="set_config_padrao_nokia"> Set Config Padrão Nokia</label>
+            <label><input type="checkbox" name="configuracoes" value="feito_reboot"> Feito Reboot</label>
+            <label><input type="checkbox" name="configuracoes" value="fixado_band_20mhz_canal_5_2.4g"> Fixado Band 20MHz e Canal 5 na 2.4G</label>
+            <label><input type="checkbox" name="configuracoes" value="fixado_band_80mhz_canal_48_5g"> Fixado Band 80MHz e Canal 48 na 5G</label>
+        </div>
+        
+        <hr>
+        <!-- Dropdown para seleção de roteador/ONT -->
+        <div class="fieldset">
+            <legend>Roteador/ONT</legend>
+            <select name="roteador_ont">
+                <option value="240W-G">240W-G</option>
+                <option value="240W-C">240W-C</option>
+                <option value="1425GB">1425GB</option>
+                <option value="2425GA BDAA">2425GA BDAA</option>
+                <option value="2425GA BDAB">2425GA BDAB</option>
+                <option value="2425GB">2425GB</option>
+                <option value="140W">140W</option>
+                <option value="1426GA">1426GA</option>
+            </select>
+        </div>
+        
+        <hr>
+        <!-- Outros campos de texto e seleção -->
+        <div class="fieldset">
+            <legend>Outras Informações</legend>
+            <label>Sinal Medido: <input type="text" name="sinal_medido"></label>
+            <label>Conclusão:
+                <textarea name="conclusao"></textarea>
+            </label>
+            <label>Demais Clientes da Caixa Online?:
+                <select name="demais_clientes_caixa">
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                    <option value="unico_cliente">Único Cliente</option>
+                </select>
+            </label>
+        </div>
+
+        <button type="button" onclick="copiarFormulario()">Copiar Informações</button>
+    </form>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
