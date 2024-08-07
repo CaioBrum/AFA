@@ -83,16 +83,3 @@ hr {
     height: 1px;
     background-color: #ccc; /* Linha sutil para separar as seções */
 }
-
-
-/*resetar formulario*/
-.fieldset button {
-    width: 48%; /* Cada botão ocupa quase metade da largura disponível */
-    margin: 1%; /* Pequena margem para separar os botões */
-}
-
-.fieldset {
-    display: flex; /* Torna o container flexível */
-    flex-wrap: wrap; /* Permite que os itens se ajustem conforme necessário */
-    justify-content: space-between; /* Distribui espaço entre os elementos */
-}
