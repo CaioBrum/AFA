@@ -59,7 +59,15 @@ function copiarFormulario() {
         .catch(err => alert('Erro ao copiar as informações: ' + err));
 }
 
-
-
-
-
+//Adicionar Collapsible
+document.querySelectorAll('.collapsible-control').forEach(button => {
+    button.addEventListener('click', function() {
+        this.classList.toggle('active');
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+});

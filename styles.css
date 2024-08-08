@@ -83,3 +83,28 @@ hr {
     height: 1px;
     background-color: #ccc; /* Linha sutil para separar as seções */
 }
+
+
+/*Adicionar collapsible*/
+.collapsible-control {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.4s ease;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.collapsible-control.active, .collapsible-control:hover {
+    background-color: #555;
+}
